@@ -4,6 +4,7 @@ import time
 artist = input('Digite o nome do Artista desejado:\nArtista: ')
 artist = artist.title()
 song = input('Digite o nome da Música desejado:\nMúsica: ')
+song = song.lower()
 
 # Exemplo de variáveis
 # artist = "Fleetwood Mac"
@@ -21,9 +22,9 @@ nome_musica = api['mus'][0]['name']
 fonte = api['art']['url']
 letra = api['mus'][0]['text']
 letra = str(letra).rsplit('\n')
-print('Música: ',f'{nome_musica}'.upper(),f'\nArtista: {nome_artista}\n'.title(),sep='')
-print(letra)
-print(api)
+print('\nMúsica: ',f'{nome_musica}'.upper(),f'\nArtista: {nome_artista}\n'.title(),sep='')
+# print(letra)
+# print(api)
 
 for linha in range(0, len(letra)):
     time.sleep(1)
