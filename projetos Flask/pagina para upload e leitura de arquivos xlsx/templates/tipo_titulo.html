@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <div class="container">
+        <h1 style="text-align:center;color:white">Selecione o tipo de título</h1>
+        <h1> </h1>
+        <h2 style="color:white">Por favor selecione o tipo de título a ser atualizado</h2>
+    
+        <form method="POST" action="/titulo_selecionado" style="color:white">
+
+            <select name="my_html_select_box" style="color:rgb(17, 17, 17)">
+
+                <option>SELECIONE </option>
+                <option>Processar Baixa</option>
+                <option>Processar Liquidação</option>
+                
+            </select>
+                    <p> 
+                        <br /><br />
+                    </p>
+            <p><button class="btn btn-primary" type="submit">Selecionar</button></p>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <table class="table table-striped table-responsive table-bordered">
+                <thead class="thead-default" style="color:white;text-align:center">
+                    <tr>
+                        <h1 style="color:white;text-align:center">Resultado:</h1>
+                        <th>Nome do Candidato</th>
+                        <th>Última empresa</th>
+                        <th>Entrada na última empresa</th>
+                        <th>Saída da última empresa</th>
+                        <th>Nova empresa</th>
+                        <th>Entrada na nova empresa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="color:white;background:rgb(33,38,49);text-align:center">
+                        <td>{{ nome_candidato }}</td>
+                        <td>{{ ultima_empresa }}</td>
+                        <td>{{ entrada_ultima_empresa }}</td>
+                        <td>{{ saida_ultima_empresa }}</td>
+                        <td>{{ nova_empresa }}</td>
+                        <td>{{ entrada_nova_empresa }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        <div class="container" style="color:white">
+            <h2>Para realizar uma nova busca, clique no botão abaixo:</h2>
+            <form method="POST" action="/nova busca" style="color:white">
+                <h3><button class="btn btn-primary" type="submit">Nova Busca</button></h3>
+            </form>
+        </div>
+
+<!--    <div class="container" style="color:white">-->
+<!--        <h1>Resultado:</h1>-->
+<!--        <p>Nome do Candidato: {{ nome_candidado }}</p>-->
+<!--        <p>Link do linkedin: {{ link_candidado }}</p>-->
+<!--        <h2>Para buscar mais candidatos, clique no botão abaixo</h2>-->
+<!--        <form method="POST" action="/nova busca" style="color:white">-->
+<!--            <h3><button class="btn btn-primary" type="submit">Nova Busca</button></h3>-->
+<!--        </form>-->
+<!--    </div>-->
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <div class="container" style="color:white">
+        
+        <form method="POST" action="/tipo_titulo" style="color:white">
+            <h1 style="text-align:center;color:white">PROCESSAR BAIXA <br \> </h1>
+            <h2 style="color:white">Insira o arquivo</h2>
+                <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                <input type="file" />
+                <p> <br\> </p>
+                    
+        <p><button class="btn btn-primary" type="submit">Entrar</button></p>
+            </div>
+        </form>
+<!-- 
+    <div class="container">
+        <h3 style="color:white">Para realizar novas atualizações, clique abaixo</h3>
+        <form method="POST" action="/tipo_titulo" style="color:white">
+            <p><button class="btn btn-primary" type="submit">Entrar</button></p>
+        </form>
+    </div> -->
+{% endblock %}
+
